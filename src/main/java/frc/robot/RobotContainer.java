@@ -492,7 +492,7 @@ public class RobotContainer {
                         elevator))))
         .onFalse(
             Commands.runOnce(() -> drive.stop(), drive)
-            .alongWith(Commands.runOnce(() -> leds.autoScoring = false)));
+                .alongWith(Commands.runOnce(() -> leds.autoScoring = false)));
 
     // Run algae bar when Y is held
     driverController.y().toggleOnTrue(algaeManipulator.runAlgaeManipulator(1));
