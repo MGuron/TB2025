@@ -15,4 +15,4 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
       - name: Simulate robot code
-        run: ./gradlew simulate
+        run: ./gradlew simulateJava
