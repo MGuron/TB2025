@@ -15,4 +15,7 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
       - name: Simulate robot code
-        run: ./gradlew simulateJava
+        run: |
+          OUTPUT=$(./gradlew simulateJava)
+          echo "$OUTPUT"
+          echo "$OUTPUT" | grep -q "[PathPlanner] FollowPathCommand finished warmup"
